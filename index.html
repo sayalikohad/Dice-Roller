@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller</title>
+</head>
+<style>
+
+    h1{
+        text-align: center;
+        font-size: 50px;    
+    }
+    .default-img{
+        height: 150px;
+        display: block;
+        margin: 0 auto;
+   
+    }
+    .button{
+        display: block;
+        margin: 0 auto;
+        margin-top: 50px;
+        padding: 1em;
+        border: none;
+        border-radius: 50px;
+        font-weight: bold;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #2c9caf;
+        font-size: 12px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;     
+    }
+    button:hover{
+        color: black;
+        transform: scale(1.1);
+       transition: all ease 0.2s;
+        box-shadow: 4px 5px 17px -4px #268391; 
+    }
+</style>
+<body>
+    <h1 class="app-heading">Dice Roller</h1>
+
+    <img src="default.png" alt="dice" class="default-img" id="dice">
+
+    <button class="button" onclick="roll()">Roll the Dice</button>
+
+ <script>
+        function roll()
+        {
+            const randomNumber =Math.floor(Math.random() * (6-1) ) ;
+            console.log(randomNumber);
+            const diceImage = document.getElementById('dice');
+            if(randomNumber==1){
+                diceImage.src="one.png";
+            }
+            else if(randomNumber==2){
+                diceImage.src="two.png"
+            }
+            else if(randomNumber==3){
+                diceImage.src="three.png"
+            }
+            else if(randomNumber==4){
+                diceImage.src="four.png"
+            }
+            else if(randomNumber==5){
+                diceImage.src="five.png"
+            }
+            else {
+                diceImage.src="six.png"
+            }
+        }
+
+
+    </script>
+
+
+ 
+</body>
+</html>
+
+
+
+
